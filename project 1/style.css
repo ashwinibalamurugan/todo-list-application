@@ -1,0 +1,135 @@
+:root {
+    --gradient: linear-gradient(180deg, rgba(148, 0, 211, 0.73) 0%, #7A288A 100%);
+    --dark: #3B0B59;
+    --grey: #C9C3E6;
+    --grey-border: rgba(210, 190, 230, 0.75);
+    --grey-light: #F7F3F7;
+    --grey-dark: #7A288A;
+    --blue: #7A288A;
+    --green: #32CD32;
+    --white: #FFFFFF;
+    --purple-cream: #C7B8EA;
+  }
+  
+  body {
+    background: var(--purple-cream);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: var(--white);
+    padding: 3rem;
+    height: auto;
+    min-height: 50%;
+    width: 60%;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+    max-width: 30rem;
+    position: relative;
+  }
+  
+  .input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--grey-border);
+    border-radius: 5px;
+  }
+  
+  #due-date {
+    width: 150px;
+  }
+  
+  .btn {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .notification.error {
+    background-color: #ff0000;
+  }
+  
+  /* Additional styles */
+  
+  .todo-container {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .todo-checkbox {
+    margin-right: 10px;
+  }
+  
+  .counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #todoCount {
+    font-weight: bold;
+  }
+  
+  #deleteButton {
+    background-color: #ff0000;
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #deleteButton:hover {
+    background-color: #cc0000;
+  }
+  
+  .scroll {
+    overflow-y: auto;
+    max-height: 300px;
+  }
